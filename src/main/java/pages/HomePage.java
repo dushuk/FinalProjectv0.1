@@ -10,11 +10,11 @@ public class HomePage extends PageBase {
     }
 
     @FindBy(xpath = "//a[@class='navbar-brand']//img")
-    private WebElement noCodeUniversityButton;
+    protected WebElement noCodeUniversityButton;
     @FindBy(xpath = "//span[normalize-space()='Sign in']")
-    private WebElement signInHeaderButton;
+    protected WebElement signInHeaderButton;
     @FindBy(xpath = "//span[normalize-space()='Sign up']")
-    private WebElement signUpHeaderButton;
+    protected WebElement signUpHeaderButton;
 
     public void clickOnNoCodeUniversityButton() {
         click(noCodeUniversityButton);

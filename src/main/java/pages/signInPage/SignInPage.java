@@ -11,22 +11,28 @@ public class SignInPage extends PageBase {
     }
 
     @FindBy(id = "sw-form-capture-email-input")
-    private WebElement fieldEmail;
+    protected WebElement fieldEmail;
     @FindBy(id = "sw-form-password-input")
-    private WebElement fieldPassword;
+    protected WebElement fieldPassword;
     @FindBy(id = "sw-sign-in-submit-btn")
-    private WebElement signInButton;
+    protected WebElement signInButton;
+    @FindBy(xpath = "//a[normalize-space()='Forgot password']")
+    protected WebElement forgotPassword;
 
     public void fillFieldEmail(String email) {
         fillField(fieldEmail, email);
     }
 
-    public void fillFieldPassword() {
-
+    public void fillFieldPassword(String password) {
+        fillField(fieldPassword, password);
     }
 
     public void clickOnSignInButton() {
         click(signInButton);
+    }
+
+    public void clickForgotPassword() {
+        click(forgotPassword);
     }
 }
 
